@@ -47,6 +47,7 @@
 
 w = 15.5;  // width
 h =  5.0;  // height
+s = 10.0;  // length of pull stub
 
 
 l = h*4;              // length
@@ -59,38 +60,38 @@ module window_stopper()
       difference()
       {
          // creates base
-         translate([ -(h*2), 0, 0 ])
-            cube([  l+(h*2), w, h ], center = false);
+         translate([  0, 0, 0 ])
+            cube([  l+s, w, h ], center = false);
 
          // cuts slope
-         translate( [ 0,    -1,   h ] ) 
+         translate( [ s,    -1,   h ] ) 
             rotate( [ 0,     a,   0 ] ) 
             cube(   [ l*2, w+2, h*2 ], center=false);
       
          // cuts slot for stopper
-         translate([ 1-(w/3),               ((w/3)), -1] )
-            cube(  [     l-2, ((w/3)), 10], center=false);
+         translate([ s+1-(w/3), ((w/3)), -1 ] )
+            cube(  [       l-2, ((w/3)), 10 ], center=false);
 
          // cuts bottom fingernail tab
-         translate([ 2.5-(h*2),  -1,  -1 ] )
-            cube([        1.5, w+2,   2 ], center=false);
+         translate([ 2.5,  -1,  -1 ] )
+            cube([   1.5, w+2,   2 ], center=false);
           
          // cuts top fingernail tab
-         translate([ 2.5-(h*2),  -1, h-1 ] )
-            cube([        1.5, w+2,   2 ], center=false);
+         translate([ 2.5,  -1, h-1 ] )
+            cube([   1.5, w+2,   2 ], center=false);
 
          // cuts left fingernail tab
-         translate([ 2.5-(h*2),  -1,  -1 ] )
-            cube([        1.5,   2, h+2 ], center=false);
+         translate([ 2.5,  -1,  -1 ] )
+            cube([   1.5,   2, h+2 ], center=false);
 
          // cuts right fingernail tab
-         translate([ 2.5-(h*2), w-1,  -1 ] )
-            cube([        1.5,   2, h+2 ], center=false);
+         translate([ 2.5, w-1,  -1 ] )
+            cube([   1.5,   2, h+2 ], center=false);
       };
 
       // adds stopper
-      translate( [ l-(w/3)-1, (w/3)*1.10,    0] )
-         cube(   [   (w/3)+1, (w/3)*0.80, h*.85], center=false);
+      translate( [ l+s-(w/3)-1, (w/3)*1.10,     0 ] )
+         cube(   [     (w/3)+1, (w/3)*0.80, h*.85 ], center=false);
    };
 };
 
