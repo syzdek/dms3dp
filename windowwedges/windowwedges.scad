@@ -73,19 +73,19 @@ module window_stopper()
 
          // cuts bottom fingernail tab
          translate([ 2.5-(h*2),  -1,  -1 ] )
-             cube([        1.5, w+2,   2 ], center=false);
+            cube([        1.5, w+2,   2 ], center=false);
           
          // cuts top fingernail tab
          translate([ 2.5-(h*2),  -1, h-1 ] )
-             cube([        1.5, w+2,   2 ], center=false);
+            cube([        1.5, w+2,   2 ], center=false);
 
          // cuts left fingernail tab
          translate([ 2.5-(h*2),  -1,  -1 ] )
-             cube([        1.5,   2, h+2 ], center=false);
+            cube([        1.5,   2, h+2 ], center=false);
 
          // cuts right fingernail tab
          translate([ 2.5-(h*2), w-1,  -1 ] )
-             cube([        1.5,   2, h+2 ], center=false);
+            cube([        1.5,   2, h+2 ], center=false);
       };
 
       // adds stopper
