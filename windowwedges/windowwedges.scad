@@ -64,10 +64,10 @@ module window_stopper()
             cube([  l+s, w, h ], center = false);
 
          // cuts slope
-         translate( [ s,    -1,   h ] ) 
-            rotate( [ 0,     a,   0 ] ) 
+         translate( [   s,  -1,   h ] )
+            rotate( [   0,   a,   0 ] )
             cube(   [ l*2, w+2, h*2 ], center=false);
-      
+
          // cuts slot for stopper
          translate([ s+1-(w/3), ((w/3)), -1 ] )
             cube(  [       l-2, ((w/3)), h+2 ], center=false);
@@ -75,7 +75,7 @@ module window_stopper()
          // cuts bottom fingernail tab
          translate([ 2.5,  -1,  -1 ] )
             cube([   1.5, w+2,   2 ], center=false);
-          
+
          // cuts top fingernail tab
          translate([ 2.5,  -1, h-1 ] )
             cube([   1.5, w+2,   2 ], center=false);
