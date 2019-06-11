@@ -47,9 +47,11 @@
  */
 
 
-// dimensions of window operator track
+// width of window operator track
 track_width  = 15.5;
-track_height = 5.0;
+
+// height of window operator track
+track_height = 5.0;  // height of window operator track
 
 
 module window_stopper(w, h)
