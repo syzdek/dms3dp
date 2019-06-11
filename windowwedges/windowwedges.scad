@@ -50,7 +50,7 @@ h =  5.0;  // height
 s = 10.0;  // length of pull stub
 
 
-l = h*4;              // length
+l = h*4;              // length of slope
 a = atan((h*0.75)/l); // angle of slope
 
 module window_stopper()
@@ -70,7 +70,7 @@ module window_stopper()
       
          // cuts slot for stopper
          translate([ s+1-(w/3), ((w/3)), -1 ] )
-            cube(  [       l-2, ((w/3)), 10 ], center=false);
+            cube(  [       l-2, ((w/3)), h+2 ], center=false);
 
          // cuts bottom fingernail tab
          translate([ 2.5,  -1,  -1 ] )
