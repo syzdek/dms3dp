@@ -68,9 +68,9 @@ module window_stopper()
             rotate( [   0,   a,   0 ] )
             cube(   [ l*2, w+2, h*2 ], center=false);
 
-         // cuts slot for stopper
-         translate([ s+1-(w/3), ((w/3)), -1 ] )
-            cube(  [       l-2, ((w/3)), h+2 ], center=false);
+         // cuts track for catch
+         translate([      -1, (w/2)-1.25, 1.5 ] )
+            cube(  [ s+l-h+1,        2.5,   h ], center=false);
 
          // cuts bottom fingernail tab
          translate([ 2.5,  -1,  -1 ] )
@@ -81,9 +81,9 @@ module window_stopper()
             cube([   1.5, w+2,   2 ], center=false);
       };
 
-      // adds stopper
-      translate( [ l+s-(w/3)-1, (w/3)*1.10,     0 ] )
-         cube(   [     (w/3)+1, (w/3)*0.80, h*.85 ], center=false);
+      // adds catch
+      translate( [ l+s-h, (w/2)-1.0,     0 ] )
+         cube(   [     h,       2.0, h-1.5 ], center=false);
    };
 };
 
