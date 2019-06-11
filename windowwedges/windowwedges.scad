@@ -88,7 +88,7 @@ module window_stopper(w, h)
 
       // adds catch
       translate( [ l+s-h, (w/2)-1.0,     0 ] )
-         cube(   [     h,       2.0, h-1.5 ], center=false);
+         cube(   [     h,       2.0, h-1.0 ], center=false);
    };
 };
 
