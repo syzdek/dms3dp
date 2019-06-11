@@ -45,16 +45,17 @@
  */
 
 
-w = 15.5;  // width
-h =  5.0;  // height
-s = 10.0;  // length of pull stub
+// dimensions of window operator track
+track_width  = 15.5;
+track_height = 5.0;
 
 
-l = h*4;              // length of slope
-a = atan((h*0.75)/l); // angle of slope
-
-module window_stopper()
+module window_stopper(w, h)
 {
+   s = 3.0*h;            // length of pull stub
+   l = h*4;              // length of slope
+   a = atan((h*0.75)/l); // angle of slope
+
    union()
    {
       difference()
@@ -89,8 +90,8 @@ module window_stopper()
 
 
 // bottom stopper
-translate([0,    5, 0]) window_stopper();
-translate([0, -w-5, 0]) window_stopper();
+translate([1,               2, 0]) window_stopper( track_width, track_height );
+translate([1, 0-track_width-2, 0]) window_stopper( track_width, track_height );
 
 
 /* end of script */
