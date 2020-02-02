@@ -1,2 +1,4 @@
+*.gcode
 *.stl
 *.png
+.DS_Store
